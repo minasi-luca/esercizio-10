@@ -1,15 +1,18 @@
+<div class="sfondo">
+
+
 <ng-template *ngIf = "name === 'inizio'; then bloccoInizio"></ng-template>
 
 <ng-template #bloccoInizio>
     <div class="container-fluid">
         <div class="row">
             <div *ngFor="let element of pianeti index as i" class="col-md-7" style="margin-left: 23%;">
-            <div class="card mb-6">
-                <h1 align="center" style="color: red; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{element.destinazione}}</h1>
+            <div class="card mb-6" style="background-color: orange;">
+                <h1 align="center" style="color: rgb(0, 17, 255); margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{element.destinazione}}</h1>
                 <br>
                 <br>
                 <img class="card-img-top" src="{{element.immagine}}" alt="Card image">
-                <div class="card-body">
+                <div class="card-body" style="color: darkblue;">
                     <br>
                     <p>pianeta di partenza: {{element.pianetadipartenza}}</p>
                     <br>
@@ -22,6 +25,9 @@
                     <p>giorno d'arrivo: {{element.arrivo}}</p>
                     <br>
                     <p>costo: {{element.costo}}</p>
+                    <br>
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
@@ -29,3 +35,4 @@
     </div>
 
 </ng-template>
+</div>
